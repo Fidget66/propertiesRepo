@@ -1,0 +1,6 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /webapp
+path:
+  simplewebapp: http://localhost:8080/simplewebapp/
