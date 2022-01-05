@@ -1,0 +1,24 @@
+server:
+  port: 8110
+  servlet:
+    context-path: /MailSendler
+java-mail-sender:
+  host: smtp.gmail.com
+  port: 587
+  username: myfitnessappmail@gmail.com
+  password: fxbpeasnziuympbh
+  props.mail.transport.protocol: smtp
+  props.mail.smtp.auth: true
+  props.mail.smtp.starttls.enable: true
+  props.mail.debug: true
+email:
+  time: 0 20 16-18 * * *
+  from: myfitnessappmail@gmail.com
+spring:
+  kafka:
+    consumer:
+      group-id: myKafkaGroupId
+      topic: email1
+      properties:
+        spring.json.trusted.packages: "*"
+    bootstrap-servers: http://localhost:9092
