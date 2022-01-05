@@ -4,3 +4,10 @@ server:
     context-path: /webapp
 path:
   simplewebapp: http://localhost:8080/simplewebapp/
+eureka:
+  instance:
+    appname: webapp
+  client:
+    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
